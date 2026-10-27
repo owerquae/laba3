@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <h1>Список файлов с данными</h1>
+    {% if files %}
+        <ul>
+            {% for file in files %}
+                <li>{{ file }} <a href="{% url 'view_file' file %}">(Просмотреть)</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>На сервере пока нет ни одного файла.</p>
+    {% endif %}
+{% endblock %}

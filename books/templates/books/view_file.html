@@ -1,0 +1,6 @@
+{% extends 'books/base.html' %}
+{% block content %}
+    <h1>Содержимое файла: {{ filename }}</h1>
+    <pre>{{ content }}</pre>
+    <a href="{% url 'index' %}">Назад</a>
+{% endblock %}
